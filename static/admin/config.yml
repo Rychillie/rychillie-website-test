@@ -1,6 +1,6 @@
 backend:
-  name: rychillie.github.io
-  branch: master
+  name: github
+  repo: rychillie/rychillie.github.io
 
 media_folder: static/images
 public_folder: /images
