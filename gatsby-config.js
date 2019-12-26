@@ -1,9 +1,9 @@
 module.exports = {
     siteMetadata: {
-		title: 'Gatsby - SCSS Starter',
-        description: `Open-Source Gatsby Starter with SCSS Styling`,
-        author: `@Sm0keDev`,
-		siteUrl: `https://gatsby-starter-scss.appseed.us`
+		title: 'Rychillie 🦄',
+        description: `Brazilian Front-End Developer`,
+        author: `@rychillie`,
+		siteUrl: `https://rychillie.net`
     },
     plugins: [
         `gatsby-plugin-react-helmet`,
@@ -29,19 +29,8 @@ module.exports = {
             },
         },
         'gatsby-plugin-sitemap',
+        `gatsby-plugin-netlify-cms`,
         `gatsby-plugin-sass`,
-        {
-            resolve: 'gatsby-plugin-web-font-loader',
-            options: {
-                google: {
-                    families: ['PT Serif'],
-                },
-                custom: {
-                    families: ['Inter'],
-                    urls: ['/fonts/fonts.css']
-                }
-            }
-        },
         // this (optional) plugin enables Progressive Web App + Offline functionality
         // To learn more, visit: https://gatsby.dev/offline
         // `gatsby-plugin-offline`,

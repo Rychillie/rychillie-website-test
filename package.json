@@ -1,23 +1,26 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "rychillie",
   "private": true,
   "description": "A simple starter to get up and developing quickly with Gatsby",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Rychillie <rychillie@hotmail.com>",
   "dependencies": {
     "ftp-deploy": "^2.3.3",
-    "gatsby": "^2.7.5",
+    "gatsby": "^2.18.17",
     "gatsby-cli": "^2.6.5",
     "gatsby-image": "^2.1.2",
-    "gatsby-plugin-manifest": "^2.1.1",
+    "gatsby-plugin-manifest": "^2.2.34",
+    "gatsby-plugin-netlify-cms": "^4.1.33",
     "gatsby-plugin-offline": "^2.1.1",
     "gatsby-plugin-react-helmet": "^3.0.12",
     "gatsby-plugin-sass": "^2.0.11",
-    "gatsby-plugin-sharp": "^2.1.2",
+    "gatsby-plugin-sharp": "^2.3.10",
     "gatsby-plugin-sitemap": "^2.2.0",
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-source-filesystem": "^2.0.37",
-    "gatsby-transformer-sharp": "^2.1.20",
+    "gatsby-transformer-sharp": "^2.3.9",
+    "gatsby-transformer-sqip": "^2.1.55",
+    "netlify-cms-app": "^2.10.1",
     "node-sass": "^4.12.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
@@ -43,7 +46,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/Rychillie/rychillie.github.io"
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"

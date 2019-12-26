@@ -3,14 +3,14 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-import featureImage from "../../static/images/intro.gif" 
-import featureVideo from "../../static/images/cheetah.mp4" 
+//import featureImage from "../../static/images/intro.gif"
+import featureVideo from "../../static/images/cheetah.mp4"
 
 import thumbnailEvent from "../../static/images/feature-event.png"
 import thumbnailBoard from "../../static/images/feature-board.png"
 import thumbnailNews from "../../static/images/feature-news.png"
-import thumbnailTeams from "../../static/images/feature-team.png"
-import thumbnailStaff from "../../static/images/feature-user.png"
+//import thumbnailTeams from "../../static/images/feature-team.png"
+//import thumbnailStaff from "../../static/images/feature-user.png"
 
 var videoStyle = {
   width: '100%'
@@ -21,9 +21,9 @@ const IndexPage = () => (
         <SEO title="Open-Source Gatsby Starter with SCSS Styling"/>
 
         <div className={"page-header home"}>
-            <h1><a href="https://www.gatsbyjs.org/">GatsbyJS</a> SCSS Starter</h1>
+            <h1><a href="https://www.gatsbyjs.org/">Rychillie</a> SCSS Starter</h1>
             <p>
-                Blazing fast <a href="https://github.com/app-generator/gatsby-starter-scss">open-source</a>  app, 
+                Blazing fast <a href="https://github.com/app-generator/gatsby-starter-scss">open-source</a>  app,
                 built in GatsbyJS and styled in SCSS.
             </p>
 
@@ -35,10 +35,10 @@ const IndexPage = () => (
 
                     <video style={videoStyle} playsinline muted loop="true" autoplay="autoplay" controls>
                         <source src={featureVideo} type="video/mp4" />
-                    </video>                
+                    </video>
 
                 </div>
-            </div>                    
+            </div>
         </div>
 
         <div className={"container"}>
@@ -55,9 +55,9 @@ const IndexPage = () => (
                             <div className={"feature__content"}>
                                 <h2>Open-Source</h2>
                                 <p>
-                                    Gatsby Starter, released under the MIt license, suitable for hobby or commercial projects. 
+                                    Gatsby Starter, released under the MIt license, suitable for hobby or commercial projects.
                                     <br />
-                                    Grab the <a href="https://github.com/app-generator/gatsby-starter-scss">sources</a> and start coding.  
+                                    Grab the <a href="https://github.com/app-generator/gatsby-starter-scss">sources</a> and start coding.
                                 </p>
                             </div>
                         </div>
@@ -98,7 +98,7 @@ const IndexPage = () => (
                                 <p>
                                     Coded on top of this <a href="https://github.com/histaff/website-static/">starter</a> {' '}
                                     by <a href="https://twitter.com/Sm0keDev">Sm0ke</a>.
-                                    <br /> Video <a href="https://www.youtube.com/watch?v=8-9oFxYFODE">Formula E Car vs Cheetah</a> 
+                                    <br /> Video <a href="https://www.youtube.com/watch?v=8-9oFxYFODE">Formula E Car vs Cheetah</a>
                                 </p>
                             </div>
                         </div>
