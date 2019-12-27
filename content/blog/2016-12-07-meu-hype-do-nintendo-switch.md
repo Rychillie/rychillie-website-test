@@ -2,6 +2,11 @@
 title: Meu Hype do Nintendo Switch
 date: '2016-12-07 22:00'
 description: O que espero que a Nintendo Faça certo...
+tags:
+  - tag
+  - tag
+  - tag
+  - ''
 ---
 O primeiro contato que tive com games foi com um Super Nintendo no começo do século, joguei muito em consoles da Nintendo como o próprio SNES, o Game Boy Advance SP, Nintendo Wii, além de jogar muito em emuladores pelo computador. Se fosse para escolher um console eu certamente diria que sou Nintendista, pois a Nintendo segue o meu estilo de jogo, o COOP. Gosto muito de jogos COOP, pois os melhores momentos que passei jogando, foi com amigos, por mais que jogue bastante sozinho eu prefiro mil vezes um jogo coop offline do que um jogo Online Single-Player.
 
