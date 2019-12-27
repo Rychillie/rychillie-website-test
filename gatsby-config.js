@@ -6,6 +6,7 @@ module.exports = {
 		siteUrl: `https://rychillie.net`
     },
     plugins: [
+        `gatsby-plugin-netlify-cms`,
         `gatsby-plugin-react-helmet`,
         {
             resolve: `gatsby-source-filesystem`,
@@ -16,6 +17,29 @@ module.exports = {
         },
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,
+        `gatsby-plugin-offline`,
+        `gatsby-plugin-feed-mdx`,
+        {
+          resolve: `gatsby-source-filesystem`,
+          options: {
+            path: `${__dirname}/content/blog`,
+            name: `blog`,
+          },
+        },
+        {
+          resolve: `gatsby-plugin-mdx`,
+          options: {
+            extensions: [".mdx", ".md"],
+            gatsbyRemarkPlugins: [
+              {
+                resolve: `gatsby-remark-copy-linked-files`,
+              },
+              {
+                resolve: `gatsby-remark-smartypants`,
+              },
+            ],
+          },
+        },
         {
             resolve: `gatsby-plugin-manifest`,
             options: {
@@ -29,10 +53,15 @@ module.exports = {
             },
         },
         'gatsby-plugin-sitemap',
-        `gatsby-plugin-netlify-cms`,
+        {
+            resolve: `gatsby-plugin-google-analytics`,
+            options: {
+              // replace "UA-XXXXXXXXX-X" with your own Tracking ID
+              trackingId: "UA-45575876-4",
+            },
+        },
         `gatsby-plugin-sass`,
         // this (optional) plugin enables Progressive Web App + Offline functionality
         // To learn more, visit: https://gatsby.dev/offline
-        // `gatsby-plugin-offline`,
     ],
 }
