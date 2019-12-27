@@ -51,7 +51,7 @@ module.exports = {
       options: {
         name: `Rychillie 🦄`,
         description: 'Brazilian Front-End Developer',
-        short_name: `starter`,
+        short_name: `Rychillie 🦄`,
         start_url: `/`,
         background_color: `#191919`,
         theme_color: `#b53a3a`,
