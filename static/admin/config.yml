@@ -1,6 +1,7 @@
 backend:
   name: github
   repo: Rychillie/rychillie
+  base_url: https://rychillie.net
 
 media_folder: static/images
 public_folder: /images
