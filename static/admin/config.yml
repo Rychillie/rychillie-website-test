@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: master
+  repo: master
 
 media_folder: static/images
 public_folder: /images
@@ -11,7 +11,8 @@ collections:
     folder: "content/blog"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    preview: true
+    editor:
+     preview: true
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
       - { label: "Title", name: "title", widget: "string" }
