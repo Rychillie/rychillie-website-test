@@ -1,6 +1,7 @@
 backend:
   name: git-gateway
   branch: master
+  site_domain: https://rychillie.netlify.com/#/
 
 media_folder: static/images
 public_folder: /images
