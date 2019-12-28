@@ -1,7 +1,11 @@
 backend:
   name: github
   repo: Rychillie/rychillie
-  base_url: https://rychillie.net
+  branch: master
+  base_url: https://api.netlify.com
+  site_domain: rychillie.net
+  auth_endpoint: auth
+  api_root: https://api.github.com
 
 media_folder: static/images
 public_folder: /images
