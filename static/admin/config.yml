@@ -11,6 +11,7 @@ collections:
     folder: "content/blog"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    editor:
     preview: true
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
