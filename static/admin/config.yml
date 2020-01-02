@@ -1,7 +1,7 @@
 backend:
-  name: git-gateway
-  branch: master
+  name: github
   repo: rychillie/rychillie
+  branch: master
   site_domain: rychillie.net
 
 media_folder: static/images
