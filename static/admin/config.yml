@@ -2,7 +2,7 @@ backend:
   name: github
   repo: rychillie/rychillie
   branch: master
-  site_domain: rychillie.net
+  site_domain: https://rychillie.net
 
 media_folder: static/images
 public_folder: /images
