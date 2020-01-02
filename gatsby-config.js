@@ -6,6 +6,7 @@ module.exports = {
     siteUrl: `https://rychillie.net`
   },
   plugins: [
+    `gatsby-plugin-twitter`,
     `gatsby-plugin-netlify-cms`,
     {
       resolve: `gatsby-plugin-netlify-cms`,
