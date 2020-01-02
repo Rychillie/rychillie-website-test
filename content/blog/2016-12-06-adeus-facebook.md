@@ -7,8 +7,12 @@ introduction: teste
 twitter_text: teste
 tags:
   - teste
+  - testa
+  - testo
 categories:
   - teste
+  - testa
+  - testo
 ---
 A muitos anos venho me inspirando para criar um blog no qual possa expressar minha opinião e compartilhar meus trabalhos, um lugar onde eu possa chamar de meu. Um dos maiores causadores desta vontade incessante de me isolar em meu mundo é o Facebook. O Facebook é uma plataforma extraordinária eu tenho que admitir, mas como diz aquele velho ditado "Os Incomodados que se Retirem".
 
