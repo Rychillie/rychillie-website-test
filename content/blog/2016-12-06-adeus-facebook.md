@@ -1,7 +1,14 @@
 ---
 date: '2016-12-06 21:00'
+image: /images/facebook.jpg
 title: Adeus Facebook
 description: Não estou feliz no facebook então quitei!
+introduction: teste
+twitter_text: teste
+tags:
+  - teste
+categories:
+  - teste
 ---
 A muitos anos venho me inspirando para criar um blog no qual possa expressar minha opinião e compartilhar meus trabalhos, um lugar onde eu possa chamar de meu. Um dos maiores causadores desta vontade incessante de me isolar em meu mundo é o Facebook. O Facebook é uma plataforma extraordinária eu tenho que admitir, mas como diz aquele velho ditado "Os Incomodados que se Retirem".
 
