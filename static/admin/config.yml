@@ -1,5 +1,5 @@
 backend:
-  name: github
+  name: git-gateway
   repo: rychillie/rychillie
   branch: master
   site_domain: https://rychillie.net
