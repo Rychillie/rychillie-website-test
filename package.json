@@ -7,6 +7,7 @@
   "dependencies": {
     "@mdx-js/mdx": "^1.5.3",
     "@mdx-js/react": "^1.5.3",
+    "@types/netlify-identity-widget": "^1.4.1",
     "ftp-deploy": "^2.3.3",
     "gatsby": "^2.18.17",
     "gatsby-cli": "^2.6.5",
