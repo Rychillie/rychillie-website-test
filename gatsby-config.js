@@ -7,7 +7,6 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-twitter`,
-    `gatsby-plugin-netlify-cms`,
     {
       resolve: `gatsby-plugin-netlify-cms`,
       options: {
