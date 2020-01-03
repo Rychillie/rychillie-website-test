@@ -2,7 +2,7 @@ backend:
   name: git-gateway
   repo: Rychillie/rychillie
   branch: master
-  site_domain: https://rychillie.netlify.com
+  site_domain: https://rychillie.net
 
 media_folder: static/images
 public_folder: /images
