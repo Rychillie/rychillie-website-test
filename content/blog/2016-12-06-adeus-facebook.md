@@ -1,6 +1,6 @@
 ---
 date: '2016-12-06 21:00'
-image: /images/facebook.jpg
+image: /images/facebook.webp
 title: Adeus Facebook
 description: Não estou feliz no facebook então quitei!
 introduction: teste
