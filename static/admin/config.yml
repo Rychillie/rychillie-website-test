@@ -3,7 +3,7 @@ backend:
   repo: Rychillie/rychillie
   branch: master
   site_domain: https://rychillie.net
-  auth_endpoint: https://rychillie.net/.netlify/identity
+  api_root: https://rychillie.net/.netlify/identity
 
 media_folder: static/images
 public_folder: /images
