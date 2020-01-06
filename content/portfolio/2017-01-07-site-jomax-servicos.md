@@ -1,11 +1,13 @@
 ---
+date: '2017-01-07 22:00'
+image: /images/facebook.webp
 title: Site - Jomax Serviços
-layout: portfolio
-date: 2017-01-07 22:00
+description: Lading Page da Jomax Serviços
+introduction: Lading Page da Jomax Serviços
+twitter_text: Lading Page da Jomax Serviços
 empresa: Jomax Serviços
-projeto: Website - Landing Page
 linkcliente: http://jomaxservicos.com.br
-tag:
+tags:
 - landing
 - page
 - website
@@ -13,8 +15,9 @@ tag:
 - mobile
 - friendly
 - portfolio
-author: rychillie
-description: Lading Page da Jomax Serviços
+categories:
+  - Website
+  - Landing Page
 ---
 
 Um cliente sério, que procurava uma forma simples e direta de apresentar sua empresa, queria que seus clientes encontrassem seus dados de forma facil como seus e-mail's para contato e telefones.

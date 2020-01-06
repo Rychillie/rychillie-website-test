@@ -50,6 +50,8 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Introduction', name: 'introduction', widget: 'string' }
+      - { label: 'empresa', name: 'empresa', widget: 'string' }
+      - { label: 'link', name: 'link', widget: 'string' }
       - { label: 'Twitter text', name: 'twitter_text', widget: 'string' }
       - { label: 'Tags', name: 'tags', widget: 'list', default: [''] }
       - {
