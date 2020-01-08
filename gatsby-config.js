@@ -17,14 +17,24 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
+    `gatsby-remark-lazy-load`,
+    `gatsby-remark-external-links`,
+    `gatsby-plugin-transition-link`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-offline`,
     //`gatsby-plugin-feed-mdx`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/blog`,
+        path: `${__dirname}/content/blog/`,
         name: `blog`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `portfolio`,
+        path: `${__dirname}/content/portfolio/`,
       },
     },
     {
