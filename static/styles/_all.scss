@@ -1,6 +1,6 @@
 body {
   background-color: $dark;
-  font-family: 'Montserrat', sans-serif;
+  font-family: $montserrat;
   color: $gray;
   margin: 0;
   width: 100%;
@@ -8,11 +8,11 @@ body {
   padding: 0;
 
   p {
-    font-family: 'Montserrat', sans-serif;
+    font-family: $montserrat;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: $montserrat;
     line-height: 40px;
     color: $main;
   }
@@ -28,7 +28,11 @@ body {
   header {
     background-color: $dark;
     display: block;
-    padding: 32px 0;
+    padding: 17px 0;
+
+    @media only screen and (min-width: 60em) {
+      padding: 32px 0;
+    }
 
     .title {
       a {
@@ -48,11 +52,15 @@ body {
 
     .top-menu {
       .nav-top {
+        display: block;
+
         .menu {
+          display: block;
+          margin: 5px 0;
           background: $dark;
           border-radius: 50%;
-          width: 40px;
-          height: 40px;
+          width: 30px;
+          height: 30px;
           position: relative;
           float: right;
           cursor: pointer;
@@ -68,8 +76,8 @@ body {
           position: relative;
           display: block;
           background: $main;
-          top: 30px;
-          left: 15px;
+          top: 15px;
+          left: 0;
 
           &:before, &:after {
             display: block;
@@ -80,17 +88,17 @@ body {
           }
 
           &:before {
-            left: -10px;
+            left: 0px;
             width: 30px;
             height: 2px;
-            top: -15px;
+            top: -5px;
           }
 
           &:after {
-            left: -3px;
+            left: 7px;
             width: 23px;
             height: 2px;
-            bottom: 0px;
+            bottom: -5px;
           }
         }
 
@@ -99,66 +107,73 @@ body {
 
           &:checked ~ label .hamburguer{
             &:before {
-              top: -10px;
-              left: -9px;
+              top: -1px;
               transform: rotate(-45deg);
             }
 
             &:after {
-              left: -9px;
+              left: 0;
               width: 30px;
-              bottom: 8px;
+              bottom: -1px;
               transform: rotate(45deg);
             }
           }
 
           // fundo menu
           &:checked ~ label .menu {
-            box-shadow: 0 0 0 130vw #414141, 0 0 0 130vh #414141;
+            box-shadow: 0 0 0 130vw $dark, 0 0 0 130vh $dark;
           }
 
           // só aparecer o menu ao clicar
           &:checked ~ ul {
+            display: block;
+            z-index: 2;
             opacity: 1;
           }
         }
 
-        // animação e estilo do menu
         ul {
           position: absolute;
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
           list-style: none;
-          font-size: 45px;
-          opacity: 0;
           transition: .25s .1s cubic-bezier(0, 1.07, 0, 1.02);
-          z-index: 2;
-        }
+          opacity: 0;
+          z-index: -1;
+          text-align: center;
+          display: none;
 
-        @media only screen and (min-width: 45em) {
-          ul {
-            display: flex;
-            justify-content: space-between;
+          li {
+            display: inline-block;
 
-            li {
-              display: inline-block;
-
-              a {
-                display: inline-block;
-                font-size: 18px;
-                line-height: 40px;
-                text-align: center;
-              }
+            a {
+              display: block;
+              margin-bottom: 1em;
+              font-size: 45px;
+              line-height: 50px;
+              text-decoration: none;
+              text-align: center;
             }
           }
         }
 
         @media only screen and (min-width: 60em) {
+          .menu, .hamburguer, input {
+            display: none;
+          }
 
           ul {
             display: flex;
             justify-content: space-between;
+            position: relative;
+            opacity: 1;
+            top: unset;
+            left: unset;
+            -webkit-transform: unset;
+            transform: unset;
+            list-style: none;
+            z-index: 2;
 
             li {
               display: inline-block;
@@ -168,6 +183,7 @@ body {
                 font-size: 18px;
                 line-height: 40px;
                 text-align: center;
+                margin: 0;
               }
             }
           }
@@ -180,7 +196,7 @@ body {
 
 /*body {
   background-color: $dark;
-  font-family: 'Montserrat', sans-serif;
+  font-family: $montserrat;
   color: $gray;
 
   p {
@@ -188,7 +204,7 @@ body {
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: $montserrat;
     line-height: 43px;
     color: $main;
   }

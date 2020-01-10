@@ -9,13 +9,13 @@ const Header = ({siteTitle}) => (
         <div className={"container"}>
             <div className={"row top-menu"}>
                 <div className={"col-10-sm col-8 title"}>
-                    <Link to="/" title={siteTitle} className={"title"}>{siteTitle}</Link>
+                    <Link to="/" title={siteTitle} className={"title"}>Title</Link>
                 </div>
 
                 <nav className={"col-2-sm col-4 nav-top"}>
-                    <input id="menu-hamburguer" type="checkbox"/>
+                    <input id="menu-hamburguer" type="checkbox"></input>
 
-                    <label for="menu-hamburguer">
+                    <label htmlFor="menu-hamburguer">
                         <div class="menu">
                             <span class="hamburguer"></span>
                         </div>
