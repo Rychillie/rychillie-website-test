@@ -16,8 +16,8 @@ const Header = ({siteTitle}) => (
                     <input id="menu-hamburguer" type="checkbox"></input>
 
                     <label htmlFor="menu-hamburguer">
-                        <div class="menu">
-                            <span class="hamburguer"></span>
+                        <div className={"menu"}>
+                            <span className={"hamburguer"}></span>
                         </div>
                     </label>
 
@@ -26,13 +26,25 @@ const Header = ({siteTitle}) => (
                             <Link to="/blog" title={"Blog"}>Blog</Link>
                         </li>
                         <li>
-                            <Link to="/blog" title={"Blog"}>Portfolio</Link>
+                            <Link to="/portfolio" title={"Portfolio"}>Portfolio</Link>
                         </li>
                         <li>
-                            <Link to="/blog" title={"Blog"}>About</Link>
+                            <Link to="/about" title={"About"}>About</Link>
                         </li>
                     </ul>
                 </nav>
+            </div>
+        </div>
+
+        <div className={"apresentation"}>
+            <div className={"profile"}>
+                <img src="../../static/images/rychillie.webp" alt="Rychillie" srcset="Rychillie"/>
+            </div>
+            <div className={"hometext"}>
+                <h2>
+                    Olá, Eu sou <span>Rychillie</span>
+                </h2>
+                <p>Um jovem Programador Front-End querendo compartilhar seu conhecimento. Sempre buscando evoluir e melhorar em todos os aspectos. Venha <Link to="/about" title={"About"}>me Conhecer</Link> um pouco mais e o <Link to="/portfolio" title={"Portfolio"}>meu trabalho</Link>.</p>
             </div>
         </div>
     </header>
