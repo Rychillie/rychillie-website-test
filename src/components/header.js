@@ -10,7 +10,7 @@ const Header = ({siteTitle}) => (
         <div className={"container"}>
             <div className={"row top-menu"}>
                 <div className={"col-10-sm col-8 title"}>
-                    <Link to="/" title={siteTitle} className={"title"}>Title</Link>
+                    <Link to="/" title={siteTitle} className={"title"}>Rychillie</Link>
                 </div>
 
                 <nav className={"col-2-sm col-4 nav-top"}>
@@ -37,11 +37,11 @@ const Header = ({siteTitle}) => (
             </div>
         </div>
 
-        <div className={"apresentation"}>
-            <div className={"profile"}>
-                <img src={ProfileImg} alt="Rychillie" srcset="Rychillie"/>
+        <div className={"apresentation row"}>
+            <div className={"col-3 profile"}>
+                <img alt="Rychillie" src={ProfileImg}/>
             </div>
-            <div className={"hometext"}>
+            <div className={"col-9 hometext"}>
                 <h2>
                     Olá, Eu sou <span>Rychillie</span>
                 </h2>

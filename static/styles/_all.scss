@@ -53,6 +53,57 @@ body {
     .apresentation {
       max-width: 640px;
       margin: 0 auto;
+
+      .profile {
+        position: relative;
+        display: inline-block;
+
+        img {
+          object-fit: cover;
+          width: 100%;
+          position: relative;
+          display: inline-block;
+          border-radius: 250px;
+        }
+
+        &::after {
+          content: "";
+          background: $dark;
+          position: absolute;
+          display: inline-block;
+          z-index: 999;
+          opacity: .25;
+          height: 100%;
+          width: 100%;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          top: 0;
+        }
+      }
+
+      .hometext {
+        h2 {
+          margin-top: 0;
+          margin-bottom: 10px;
+          color: $white;
+
+          span {
+            color: $main;
+          }
+        }
+
+        p {
+          a {
+            color: $main;
+            opacity: 1;
+
+            &:hover {
+              opacity: .6;
+            }
+          }
+        }
+      }
     }
 
     .top-menu {
