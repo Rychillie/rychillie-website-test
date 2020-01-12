@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import React from "react"
 
 //import iconSearch from "../../static/images/Search-Icon.svg"
+import ProfileImg from "../../static/images/rychillie.webp"
 
 const Header = ({siteTitle}) => (
     <header>
@@ -38,7 +39,7 @@ const Header = ({siteTitle}) => (
 
         <div className={"apresentation"}>
             <div className={"profile"}>
-                <img src="../../static/images/rychillie.webp" alt="Rychillie" srcset="Rychillie"/>
+                <img src={ProfileImg} alt="Rychillie" srcset="Rychillie"/>
             </div>
             <div className={"hometext"}>
                 <h2>
