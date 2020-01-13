@@ -71,7 +71,6 @@ body {
           background: $dark;
           position: absolute;
           display: inline-block;
-          z-index: 999;
           opacity: .25;
           height: 100%;
           width: 100%;
@@ -107,6 +106,8 @@ body {
     }
 
     .top-menu {
+      position: unset;
+
       .nav-top {
         display: block;
 
@@ -122,6 +123,7 @@ body {
           cursor: pointer;
           box-shadow: 0 0 0 0px $dark, 0 0 0 0px $dark;
           transition: box-shadow .2s ease-in-out;
+          z-index: 99;
 
           &:hover {
             box-shadow: 0 0 0 8px $dark, 0 0 0 8px $dark;
@@ -183,7 +185,7 @@ body {
           // só aparecer o menu ao clicar
           &:checked ~ ul {
             display: block;
-            z-index: 2;
+            z-index: 999;
             opacity: 1;
           }
         }
