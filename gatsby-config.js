@@ -16,18 +16,11 @@ module.exports = {
         path: `${__dirname}/static/images`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-remark-lazy-load`,
-    `gatsby-remark-external-links`,
-    `gatsby-plugin-transition-link`,
-    `gatsby-plugin-sharp`,
-    `gatsby-plugin-offline`,
-    //`gatsby-plugin-feed-mdx`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/blog/`,
         name: `blog`,
+        path: `${__dirname}/content/blog/`,
       },
     },
     {
@@ -37,6 +30,14 @@ module.exports = {
         path: `${__dirname}/content/portfolio/`,
       },
     },
+    `gatsby-transformer-remark`,
+    `gatsby-transformer-sharp`,
+    `gatsby-remark-lazy-load`,
+    `gatsby-remark-external-links`,
+    `gatsby-plugin-transition-link`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-offline`,
+    //`gatsby-plugin-feed-mdx`,
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
