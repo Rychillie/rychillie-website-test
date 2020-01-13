@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -15,7 +15,7 @@ const IndexPage = ({data}) => {
         {data.allMarkdownRemark.edges.map(({ node }) => (
         <div key={node.id} className={"post"}>
             <img alt={node.frontmatter.title}className={"imagepost"} src={node.frontmatter.image}></img>
-            <link to={node.fields.slug}><h3 className={"titlepost"}>{node.frontmatter.title}</h3></link>
+            <Link to={node.fields.slug}><h3 className={"titlepost"}>{node.frontmatter.title}</h3></Link>
             <span className={"categorydate"}>{node.frontmatter.categories} — {node.frontmatter.date}</span>
         </div>
         ))}
