@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 export default ({ data }) => {
   const post = data.markdownRemark
+
   return (
     <Layout>
       <div className={"blogpost"}>

@@ -6,6 +6,12 @@ module.exports = {
     siteUrl: `https://rychillie.net`
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-html-attributes',
+      options: {
+        lang: 'pt-br'
+      }
+    },
     `gatsby-plugin-twitter`,
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-react-helmet`,
@@ -60,8 +66,8 @@ module.exports = {
         description: 'Brazilian Front-End Developer',
         short_name: `Rychillie 🦄`,
         start_url: `/`,
-        background_color: `#191919`,
-        theme_color: `#b53a3a`,
+        background_color: `#1A1A1A`,
+        theme_color: `#FF5757`,
         display: `standalone`,
         icon: `${__dirname}/static/images/histaff.png`, // This path is relative to the root of the site.
       },
