@@ -30,7 +30,7 @@ collections:
           label: 'Category',
           name: 'categories',
           widget: 'list',
-          required: false,
+          required: true,
         }
       - { label: 'Body', name: 'body', widget: 'markdown' }
   - name: portfolio # Used in routes, e.g. /admin/collections/portfolio
@@ -58,6 +58,6 @@ collections:
           label: 'Category',
           name: 'categories',
           widget: 'list',
-          required: false,
+          required: true,
         }
       - { label: 'Body', name: 'body', widget: 'markdown' }
