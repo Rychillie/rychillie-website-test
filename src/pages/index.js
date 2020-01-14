@@ -20,7 +20,7 @@ const IndexPage = ({data}) => {
                 </div>
                 <div className={"content"}>
                   <h3 className={"titlepost"}>{node.frontmatter.title}</h3>
-                  <span className={"categorydate"}>{node.frontmatter.category} — {node.frontmatter.date}</span>
+                  <span className={"categorydate"}>{node.frontmatter.categories} — {node.frontmatter.date}</span>
                 </div>
               </Link>
           </div>
