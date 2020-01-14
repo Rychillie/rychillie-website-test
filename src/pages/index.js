@@ -1,7 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import Layout from "../components/layout"
+import Layout from "../components/home"
 import SEO from "../components/seo"
 
 const IndexPage = ({data}) => {
@@ -13,11 +13,17 @@ const IndexPage = ({data}) => {
         <SEO title="Rychillie, a Brazilian Front-End Developer"/>
 
         {data.allMarkdownRemark.edges.map(({ node }) => (
-        <div key={node.id} className={"post"}>
-            <img alt={node.frontmatter.title}className={"imagepost"} src={node.frontmatter.image}></img>
-            <Link to={node.fields.slug}><h3 className={"titlepost"}>{node.frontmatter.title}</h3></Link>
-            <span className={"categorydate"}>{node.frontmatter.categories} — {node.frontmatter.date}</span>
-        </div>
+          <div key={node.id} className={"post row"}>
+              <Link to={node.fields.slug}>
+                <div className={"img"}>
+                  <img loading="lazying" alt={node.frontmatter.title} className={"imagepost"} src={node.frontmatter.image}></img>
+                </div>
+                <div className={"content"}>
+                  <h3 className={"titlepost"}>{node.frontmatter.title}</h3>
+                  <span className={"categorydate"}>{node.frontmatter.category} — {node.frontmatter.date}</span>
+                </div>
+              </Link>
+          </div>
         ))}
     </Layout>
 )}
@@ -30,7 +36,7 @@ export const pageQuery = graphql`{
         frontmatter {
           id: title
           title
-          categories
+          category
           image
           date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
         }

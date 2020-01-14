@@ -12,3 +12,19 @@ $main:          #FF5757;
 $gray:          #8d8d8d;
 $white:         #FFFFFF;
 $dark:          #1A1A1A;
+
+@mixin box-shadow($shadow...) {
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+    box-shadow: $shadow;
+}
+
+@mixin border-radius ( $value: 3px ) {
+    -webkit-border-radius: $value;
+    -moz-border-radius: $value;
+    border-radius: $value;
+    // keeps background from busting out of border
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+}
