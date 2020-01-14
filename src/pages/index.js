@@ -36,7 +36,7 @@ export const pageQuery = graphql`{
         frontmatter {
           id: title
           title
-          category
+          categories
           image
           date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
         }
