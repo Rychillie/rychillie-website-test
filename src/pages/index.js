@@ -16,7 +16,7 @@ const IndexPage = ({data}) => {
           <div key={node.id} className={"post row"}>
               <Link to={node.fields.slug}>
                 <div className={"img"}>
-                  <img loading="lazying" alt={node.frontmatter.title} className={"imagepost"} src={node.frontmatter.image}></img>
+                  <img loading="lazy" alt={node.frontmatter.title} className={"imagepost"} src={node.frontmatter.image}></img>
                 </div>
                 <div className={"content"}>
                   <h3 className={"titlepost"}>{node.frontmatter.title}</h3>

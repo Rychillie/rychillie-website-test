@@ -8,7 +8,7 @@ const Bio = () => (
         <div className={"container"}>
             <div className={"apresentation row"}>
                 <div className={"col-3 profile"}>
-                    <img alt="Rychillie" src={ProfileImg}/>
+                    <img loading="lazy" alt="Rychillie" src={ProfileImg}/>
                 </div>
                 <div className={"col-9 hometext"}>
                     <h2>
