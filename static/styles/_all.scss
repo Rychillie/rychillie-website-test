@@ -60,18 +60,18 @@ body {
           display: block;
           margin: 5px 0;
           background: $dark;
-          border-radius: 50%;
           width: 30px;
           height: 30px;
           position: relative;
           float: right;
           cursor: pointer;
-          box-shadow: 0 0 0 0px $dark, 0 0 0 0px $dark;
-          transition: box-shadow .2s ease-in-out;
           z-index: 99;
+          @include border-radius(50%);
+          @include transition(box-shadow .2s ease-in-out);
+          @include box-shadow(0 0 0 0px $dark, 0 0 0 0px $dark);
 
           &:hover {
-            box-shadow: 0 0 0 8px $dark, 0 0 0 8px $dark;
+            @include box-shadow(0 0 0 8px $dark, 0 0 0 8px $dark);
           }
         }
 
@@ -84,10 +84,10 @@ body {
 
           &:before, &:after {
             display: block;
-            transition: .2s ease-in-out;
             position: absolute;
             background: $main;
             content: '';
+            @include transition(.2s ease-in-out .2s);
           }
 
           &:before {
@@ -111,20 +111,20 @@ body {
           &:checked ~ label .hamburguer{
             &:before {
               top: -1px;
-              transform: rotate(-45deg);
+              @include transform(rotate(-45deg));
             }
 
             &:after {
               left: 0;
               width: 30px;
               bottom: -1px;
-              transform: rotate(45deg);
+              @include transform(rotate(45deg));
             }
           }
 
           // fundo menu
           &:checked ~ label .menu {
-            box-shadow: 0 0 0 130vw $dark, 0 0 0 130vh $dark;
+            @include box-shadow(0 0 0 130vw $dark, 0 0 0 130vh $dark);
           }
 
           // só aparecer o menu ao clicar
@@ -139,13 +139,13 @@ body {
           position: absolute;
           top: 50%;
           left: 50%;
-          transform: translate(-50%, -50%);
           list-style: none;
-          transition: .25s .1s cubic-bezier(0, 1.07, 0, 1.02);
           opacity: 0;
           z-index: -1;
           text-align: center;
           display: none;
+          @include transform(translate(-50%, -50%));
+          @include transition(.25s .1s cubic-bezier(0, 1.07, 0, 1.02));
 
           li {
             display: inline-block;
@@ -173,10 +173,9 @@ body {
             opacity: 1;
             top: unset;
             left: unset;
-            -webkit-transform: unset;
-            transform: unset;
             list-style: none;
             z-index: 2;
+            @include transform(unset);
 
             li {
               display: inline-block;
@@ -331,126 +330,67 @@ body {
 }
 
 .post {
-  max-width: 94%;
-  min-height: 160px;
-  height: 160px;
-  margin: 0 auto 40px;
-  transition: .2s all ease-in-out;
-  @include border-radius(5px);
-
-  a {
-    display: inline-block;
-    width: 100%;
-  }
-
-  .img {
-    overflow: hidden;
-    margin-top: 10px;
-    margin-left: 10px;
-    margin-right: 20px;
-    margin-bottom: 10px;
-    width: 140px;
-    height: 140px;
-    float: left;
-    position: relative;
-
-    .imagepost {
-      max-width: none;
-      max-height: 100%;
-      height: auto;
-      position: absolute;
-      z-index: -1;
-      transform: translate(-50%, -50%);
-      left: 50%;
-      top: 50%;
-    }
-
-    &::after {
-      content: "";
-      background: $dark;
-      position: absolute;
-      display: inline-block;
-      opacity: .25;
-      height: 100%;
-      width: 100%;
-      bottom: 0;
-      right: 0;
-      left: 0;
-      top: 0;
-    }
-  }
+  display: grid;
+  justify-items: center;
 
   .content {
-    margin: 10px 10px 10px 0;
-    max-height: 140px;
-    height: 140px;
-
-    .titlepost {
-      margin-top: 0;
-      max-height: 90px;
-      margin-bottom: 10px;
-      line-height: 18px;
-      font-size: 14px;
-      color: $white;
-      transition: .2s all;
-    }
+    width: 280px;
+    background-color: $dark;
+    display: grid;
+    padding: 18px 32px;
+    margin: 24px 0px;
+    @include transition(all .3s ease-in-out);
+    @include box-shadow(0px 2px 6px 0px rgba(0,0,0,0.65));
+    @include border-radius(12px);
 
     .categorydate {
-      font-size: 12px;
-      line-height: 14px;
+      font-weight: 400;
+      margin-block-start: 1em;
+      margin-block-end: 1em;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+      color: $main;
+      opacity: 1;
+    }
+
+    .titlepost {
+      font-weight: 300;
+      line-height: 1.4;
+      margin-top: 8px;
+      color: $white;
+      opacity: 1;
+    }
+
+    @media only screen and (min-width: 33.75em) {
+      width: 300px;
+    }
+
+    @media only screen and (min-width: 45em) {
+      width: 500px;
     }
   }
 
   &:hover {
-    transform: translateY(-5px);
-    @include box-shadow(0px 2px 6px 0px rgba(0,0,0,0.65));
+    a {
+      opacity: 1;
 
-    .content {
-      .titlepost {
-        color: $gray;
-      }
+      .content {
+        opacity: 1;
+        @include transform(translateY(-5px));
 
-      .categorydate {
-        color: $gray;
-      }
-    }
-  }
+        .categorydate {
+          color: $main;
+          opacity: 1;
+        }
 
-  @media only screen and (min-width: 45em) {
-    max-width: 640px;
-    width: 100%;
-
-    .content {
-      .titlepost {
-        line-height: 30px;
-        font-size: 22px;
-      }
-
-      .categorydate {
-        font-size: 16px;
-        line-height: 22px;
-      }
-    }
-  }
-
-  @media only screen and (min-width: 60em) {
-    max-width: 640px;
-    width: 100%;
-
-    .content {
-      .titlepost {
-        line-height: 30px;
-        font-size: 22px;
-      }
-
-      .categorydate {
-        font-size: 16px;
-        line-height: 22px;
+        .titlepost {
+          color: $white;
+          opacity: 1;
+        }
       }
     }
   }
 }
-
 
 .blogpost {
   .titulo {
