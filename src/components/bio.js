@@ -1,7 +1,7 @@
 import {Link} from "gatsby"
 import React from "react"
 
-import ProfileImg from "../../static/images/rychillie.svg"
+import ProfileImg from "../../static/images/rychillie.webp"
 
 const Bio = () => (
     <div className={"bio"}>
