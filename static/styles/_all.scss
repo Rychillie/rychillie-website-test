@@ -35,6 +35,8 @@ body {
     }
 
     .title {
+      margin-left: 0!important;
+
       a {
         width: 151px;
         font-size: 32px;
@@ -51,6 +53,7 @@ body {
     }
 
     .top-menu {
+      margin-right: 0!important;
       position: unset;
 
       .nav-top {
@@ -362,7 +365,7 @@ body {
     }
 
     @media only screen and (min-width: 33.75em) {
-      width: 300px;
+      width: 360px;
     }
 
     @media only screen and (min-width: 45em) {
@@ -388,51 +391,26 @@ body {
 
 .blogpost {
   .titulo {
-    text-align: center;
+    text-align: left;
     color: $white;
+    margin: .5rem 0;
+    font-weight: 600;
+    font-size: 1.6rem;
   }
 
-  img {
+  .article {
+    display: inline-block;
     width: 100%;
-  }
+    position: relative;
 
-  p {
-    margin: 0 auto;
-    max-width: 94%;
-  }
-
-  &.container {
-    width: 100%;
-    margin: 0;
+    p {
+      margin: 0 0 1.2rem;
+      font-size: 1.2rem;
+      line-height: 1.6rem;
+    }
 
     img {
-      width: 100%;
-      margin: 0;
-    }
-  }
-
-  @media only screen and (min-width: 45em) {
-
-    &.container {
-      width: 100%;
-      margin: 0;
-
-      img {
-        width: 100%;
-        margin: 0;
-      }
-    }
-
-    p {
-      max-width: 640px;
-      width: 100%;
-    }
-  }
-
-  @media only screen and (min-width: 60em) {
-    p {
-      max-width: 640px;
-      width: 100%;
+      max-width: 100%;
     }
   }
 }
