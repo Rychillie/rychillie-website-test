@@ -12,8 +12,14 @@ const IndexPage = ({data}) => {
         <div key={node.id} className={"post"}>
             <Link to={node.fields.slug}>
               <div className={"content"}>
-                <span className={"categorydate"}>{node.frontmatter.categories} — {node.frontmatter.date}</span>
-                <h3 className={"titlepost"}>{node.frontmatter.title}</h3>
+                <div className={"imgpost"}>
+                  <img alt={node.frontmatter.title} className={"imagepost"} src={node.frontmatter.image}></img>
+                </div>
+                <div className={"descrition"}>
+                  <span className={"categorypost"}>{node.frontmatter.categories}</span>
+                  <h3 className={"titlepost"}>{node.frontmatter.title}</h3>
+                  <span className={"datepost"}>{node.frontmatter.date}</span>
+                </div>
               </div>
             </Link>
         </div>

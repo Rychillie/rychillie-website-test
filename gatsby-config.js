@@ -12,6 +12,7 @@ module.exports = {
         lang: 'pt-br'
       }
     },
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-twitter`,
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-react-helmet`,

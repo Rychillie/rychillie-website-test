@@ -229,56 +229,65 @@ body {
 }
 
 .post {
-  display: grid;
-  justify-items: center;
+  max-width: 640px;
+  margin: 0px auto 45px;
 
   .content {
-    width: 280px;
-    background-color: $dark;
-    display: grid;
-    padding: 18px 32px;
-    margin: 24px 0px;
-    @include transition(all .3s ease-in-out);
-    @include box-shadow(0px 2px 6px 0px rgba(0,0,0,0.65));
-    @include border-radius(12px);
+    width: 100%;
+    vertical-align: top;
+    position: relative;
 
-    .categorydate {
-      font-weight: 400;
-      margin-block-start: 1em;
-      margin-block-end: 1em;
-      margin-inline-start: 0px;
-      margin-inline-end: 0px;
-      color: $main;
-      opacity: 1;
+    .imgpost {
+      position: relative;
+      display: inline-block;
+      width: 28%;
+      vertical-align: top;
+      overflow: hidden;
+
+      &::after {
+        content: "";
+        display: block;
+        padding-top: 100%;
+      }
+
+      .imagepost {
+        position: absolute;
+        max-height: 100%;
+        top: 50%;
+        left: 50%;
+        @include transform(translate(-50%, -50%));
+      }
     }
 
-    .titlepost {
-      font-weight: 300;
-      line-height: 1.4;
-      margin-top: 8px;
-      color: $white;
-      opacity: 1;
-    }
+    .descrition {
+      display: inline-block;
+      margin: 0px 0px 0px 5%;
+      width: 67%;
 
-    @media only screen and (min-width: 33.75em) {
-      width: 360px;
-    }
-
-    @media only screen and (min-width: 45em) {
-      width: 500px;
-    }
-
-    &:hover {
-      opacity: 1;
-      @include transform(translateY(-5px));
-
-      .categorydate {
-        color: $main;
+      .titlepost {
+        font-weight: 300;
+        line-height: 1.4em;
+        font-size: 1.4em;
+        margin-top: 8px;
+        color: $white;
         opacity: 1;
       }
 
-      .titlepost {
-        color: $white;
+      .categorypost {
+        color: $main;
+      }
+
+      .datepost {
+        color: $gray;
+      }
+
+      .categorypost, .datepost {
+        font-weight: 400;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-size: .8em;
         opacity: 1;
       }
     }
@@ -292,6 +301,13 @@ body {
     margin: .5rem 0;
     font-weight: 600;
     font-size: 1.6rem;
+  }
+
+  .categorydate {
+    display: inline-block;
+    margin: .4rem 0 1.2rem;
+    font-weight: 300;
+    font-size: .9rem;
   }
 
   .article {
