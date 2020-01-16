@@ -36,6 +36,7 @@ body {
 
     .title {
       margin-left: 0!important;
+      margin-right: 4%!important;
 
       a {
         width: 151px;
@@ -53,143 +54,38 @@ body {
     }
 
     .top-menu {
-      margin-right: 0!important;
       position: unset;
 
       .nav-top {
         display: block;
+        margin-right: 0!important;
+        width: 56.33%!important;
 
-        .menu {
-          display: block;
-          margin: 5px 0;
-          background: $dark;
-          width: 30px;
-          height: 30px;
-          position: relative;
-          float: right;
-          cursor: pointer;
-          z-index: 99;
-          @include border-radius(50%);
-          @include transition(box-shadow .2s ease-in-out);
-          @include box-shadow(0 0 0 0px $dark, 0 0 0 0px $dark);
-
-          &:hover {
-            @include box-shadow(0 0 0 8px $dark, 0 0 0 8px $dark);
-          }
-        }
-
-        .hamburguer {
-          position: relative;
-          display: block;
-          background: $main;
-          top: 15px;
-          left: 0;
-
-          &:before, &:after {
-            display: block;
-            position: absolute;
-            background: $main;
-            content: '';
-            @include transition(.2s ease-in-out .2s);
-          }
-
-          &:before {
-            left: 0px;
-            width: 30px;
-            height: 2px;
-            top: -5px;
-          }
-
-          &:after {
-            left: 7px;
-            width: 23px;
-            height: 2px;
-            bottom: -5px;
-          }
-        }
-
-        input {
-          display: none;
-
-          &:checked ~ label .hamburguer{
-            &:before {
-              top: -1px;
-              @include transform(rotate(-45deg));
-            }
-
-            &:after {
-              left: 0;
-              width: 30px;
-              bottom: -1px;
-              @include transform(rotate(45deg));
-            }
-          }
-
-          // fundo menu
-          &:checked ~ label .menu {
-            @include box-shadow(0 0 0 130vw $dark, 0 0 0 130vh $dark);
-          }
-
-          // só aparecer o menu ao clicar
-          &:checked ~ ul {
-            display: block;
-            z-index: 999;
-            opacity: 1;
-          }
+        @media only screen and (min-width: 45em) {
+          width: 39.66%!important;
+          margin-left: 2%!important;
         }
 
         ul {
-          position: absolute;
-          top: 50%;
-          left: 50%;
+          display: flex;
+          justify-content: space-around;
+          position: relative;
+          opacity: 1;
+          top: unset;
+          left: unset;
           list-style: none;
-          opacity: 0;
-          z-index: -1;
-          text-align: center;
-          display: none;
-          @include transform(translate(-50%, -50%));
-          @include transition(.25s .1s cubic-bezier(0, 1.07, 0, 1.02));
+          z-index: 2;
+          @include transform(unset);
 
           li {
             display: inline-block;
 
             a {
-              display: block;
-              margin-bottom: 1em;
-              font-size: 45px;
-              line-height: 50px;
-              text-decoration: none;
-              text-align: center;
-            }
-          }
-        }
-
-        @media only screen and (min-width: 60em) {
-          .menu, .hamburguer, input {
-            display: none;
-          }
-
-          ul {
-            display: flex;
-            justify-content: space-between;
-            position: relative;
-            opacity: 1;
-            top: unset;
-            left: unset;
-            list-style: none;
-            z-index: 2;
-            @include transform(unset);
-
-            li {
               display: inline-block;
-
-              a {
-                display: inline-block;
-                font-size: 18px;
-                line-height: 40px;
-                text-align: center;
-                margin: 0;
-              }
+              font-size: 18px;
+              line-height: 40px;
+              text-align: center;
+              margin: 0;
             }
           }
         }

@@ -6,6 +6,8 @@ export default ({ data }) => {
 
   return (
     <Layout>
+    <SEO/>
+
       <div className={"blogpost"}>
         <h3 className={"titulo"}>{post.frontmatter.title}</h3>
         <div className={"article"} dangerouslySetInnerHTML={{ __html: post.html }} />

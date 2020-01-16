@@ -6,19 +6,11 @@ const Header = ({siteTitle}) => (
     <header>
         <div className={"container"}>
             <div className={"row top-menu"}>
-                <div className={"col-10-sm col-8 title"}>
+                <div className={"col-5-sm col-7 title"}>
                     <Link to="/" title={siteTitle} className={"title"}>Rychillie</Link>
                 </div>
 
-                <nav className={"col-2-sm col-4 nav-top"}>
-                    <input id="menu-hamburguer" type="checkbox"></input>
-
-                    <label htmlFor="menu-hamburguer">
-                        <div className={"menu"}>
-                            <span className={"hamburguer"}></span>
-                        </div>
-                    </label>
-
+                <nav className={"col-7-sm col-5 nav-top"}>
                     <ul>
                         <li>
                             <Link to="/blog" title={"Blog"}>Blog</Link>
