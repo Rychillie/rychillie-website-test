@@ -13,7 +13,7 @@ export default ({ data }) => {
       </Helmet>
       <div className={"blogpost"}>
         <h3 className={"titulo"}>{post.frontmatter.title}</h3>
-        <img alt={post.frontmatter.title} className={"imagepost"} src={post.frontmatter.image}></img>
+        <img loading="lazy" alt={post.frontmatter.title} className={"imagepost"} src={post.frontmatter.image}></img>
         <p className={"categorydate"}>{post.frontmatter.categories} — {post.frontmatter.date}</p>
         <div className={"article"} dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>

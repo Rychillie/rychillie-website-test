@@ -13,7 +13,7 @@ const PortfolioPage = ({data}) => {
             <Link to={node.fields.slug}>
               <div className={"content"}>
                 <div className={"imgpost"}>
-                  <img alt={node.frontmatter.title} className={"imagepost"} src={node.frontmatter.image}></img>
+                  <img loading="lazy" alt={node.frontmatter.title} className={"imagepost"} src={node.frontmatter.image}></img>
                 </div>
                 <div className={"descrition"}>
                   <span className={"categorypost"}>{node.frontmatter.categories}</span>
