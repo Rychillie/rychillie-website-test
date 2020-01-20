@@ -1,4 +1,3 @@
-import {Link} from "gatsby"
 import React from "react"
 
 import IconTwitter from "../../static/images/twitter.svg"
@@ -9,31 +8,31 @@ import IconYoutube from "../../static/images/youtube.svg"
 const Bio = () => (
     <footer>
         <div className={"container row"}>
-            <div className={"col-6 col-6-sm"}>
+            <div className={"col-6"}>
                 <ul className={"socialfooter"}>
                     <li className={"socialfooteritem"}>
-                        <Link to={"https://twitter.com/rychillie"} title={"Twitter"}>
+                        <a href="https://twitter.com/rychillie" target="_blank" rel="noopener noreferrer">
                             <img src={IconTwitter} alt="Twitter" srcset="Twitter"/>
-                        </Link>
+                        </a>
                     </li>
                     <li className={"socialfooteritem"}>
-                        <Link to={"https://instagram.com/rychillie"} title={"Instagram"}>
+                        <a href="https://instagram.com/rychillie" target="_blank" rel="noopener noreferrer">
                             <img src={IconInstagram} alt="Instagram" srcset="Instagram"/>
-                        </Link>
+                        </a>
                     </li>
                     <li className={"socialfooteritem"}>
-                        <Link to={"http://github.com/rychillie"}  title={"Github"}>
+                        <a href="http://github.com/rychillie" target="_blank" rel="noopener noreferrer">
                             <img src={IconGithub} alt="Github" srcset="Github"/>
-                        </Link>
+                        </a>
                     </li>
                     <li className={"socialfooteritem"}>
-                        <Link to={"https://youtube.com/rychillie"} title={"Youtube"}>
+                        <a href="https://youtube.com/rychillie" target="_blank" rel="noopener noreferrer">
                             <img src={IconYoutube} alt="Youtube" srcset="Youtube"/>
-                        </Link>
+                        </a>
                     </li>
                 </ul>
             </div>
-            <div className={"col-6 col-6-sm"}>
+            <div className={"col-6"}>
                 <p className={"center"}>Rychillie</p>
             </div>
         </div>
