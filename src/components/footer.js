@@ -17,17 +17,17 @@ const Bio = () => (
                         </Link>
                     </li>
                     <li className={"socialfooteritem"}>
-                        <Link to={"https://twitter.com/rychillie"} title={"Instagram"}>
+                        <Link to={"https://instagram.com/rychillie"} title={"Instagram"}>
                             <img src={IconInstagram} alt="Instagram" srcset="Instagram"/>
                         </Link>
                     </li>
                     <li className={"socialfooteritem"}>
-                        <Link to={"https://twitter.com/rychillie"} title={"Github"}>
+                        <Link to={"http://github.com/rychillie"}  title={"Github"}>
                             <img src={IconGithub} alt="Github" srcset="Github"/>
                         </Link>
                     </li>
                     <li className={"socialfooteritem"}>
-                        <Link to={"https://twitter.com/rychillie"} title={"Youtube"}>
+                        <Link to={"https://youtube.com/rychillie"} title={"Youtube"}>
                             <img src={IconYoutube} alt="Youtube" srcset="Youtube"/>
                         </Link>
                     </li>
