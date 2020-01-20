@@ -4,29 +4,29 @@ import React from "react"
 import IconTwitter from "../static/images/icons/twitter.svg"
 import IconInstagram from "../static/images/icons/instagram.svg"
 import IconGithub from "../static/images/icons/github.svg"
-import IconYoutube from "../static/images/icons/github.svg"
+import IconYoutube from "../static/images/icons/youtube.svg"
 
 const Bio = () => (
     <footer>
-        <div className={"container"}>
+        <div className={"container row"}>
             <div className={"col-6 col-6-sm"}>
-                <ul>
-                    <li>
+                <ul className={"socialfooter"}>
+                    <li className={"socialfooteritem"}>
                         <Link to={"https://twitter.com/rychillie"} title={"Twitter"}>
                             <img src={IconTwitter} alt="Twitter" srcset="Twitter"/>
                         </Link>
                     </li>
-                    <li>
+                    <li className={"socialfooteritem"}>
                         <Link to={"https://twitter.com/rychillie"} title={"Instagram"}>
                             <img src={IconInstagram} alt="Instagram" srcset="Instagram"/>
                         </Link>
                     </li>
-                    <li>
+                    <li className={"socialfooteritem"}>
                         <Link to={"https://twitter.com/rychillie"} title={"Github"}>
                             <img src={IconGithub} alt="Github" srcset="Github"/>
                         </Link>
                     </li>
-                    <li>
+                    <li className={"socialfooteritem"}>
                         <Link to={"https://twitter.com/rychillie"} title={"Youtube"}>
                             <img src={IconYoutube} alt="Youtube" srcset="Youtube"/>
                         </Link>
