@@ -12,22 +12,22 @@ const Bio = () => (
                 <ul className={"socialfooter"}>
                     <li className={"socialfooteritem"}>
                         <a href="https://twitter.com/rychillie" target="_blank" rel="noopener noreferrer">
-                            <img src={IconTwitter} alt="Twitter" srcset="Twitter"/>
+                            <img src={IconTwitter}/>
                         </a>
                     </li>
                     <li className={"socialfooteritem"}>
                         <a href="https://instagram.com/rychillie" target="_blank" rel="noopener noreferrer">
-                            <img src={IconInstagram} alt="Instagram" srcset="Instagram"/>
+                            <img src={IconInstagram}/>
                         </a>
                     </li>
                     <li className={"socialfooteritem"}>
                         <a href="http://github.com/rychillie" target="_blank" rel="noopener noreferrer">
-                            <img src={IconGithub} alt="Github" srcset="Github"/>
+                            <img src={IconGithub}/>
                         </a>
                     </li>
                     <li className={"socialfooteritem"}>
                         <a href="https://youtube.com/rychillie" target="_blank" rel="noopener noreferrer">
-                            <img src={IconYoutube} alt="Youtube" srcset="Youtube"/>
+                            <img src={IconYoutube}/>
                         </a>
                     </li>
                 </ul>
