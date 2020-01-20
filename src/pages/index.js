@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby"
 
 import Layout from "../components/home"
 import SEO from "../components/seo"
+import Footer from "../components/footer"
 
 const IndexPage = ({data}) => {
   return (
@@ -24,6 +25,7 @@ const IndexPage = ({data}) => {
             </Link>
         </div>
       ))}
+      <Footer />
     </Layout>
   )
 }

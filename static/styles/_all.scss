@@ -12,6 +12,13 @@ body {
     margin: 0 0 24px;
     font-size: 18px;
     line-height: 24px;
+
+    &.center {
+      position: relative;
+      display: inline-block;
+      text-align: center;
+      width: 100%;
+    }
   }
 
   hr {
@@ -121,7 +128,7 @@ body {
         width: 100%;
         position: relative;
         display: block;
-        border-radius: 250px;
+        @include border-radius(250px);
       }
 
       &::after {
@@ -251,7 +258,7 @@ body {
     padding: 25px 20px;
     background: darken($dark, 1%);
     @include box-sizing(border-box);
-    @include border-radius;
+    @include border-radius(5px);
 
     .imgpost {
       position: relative;
@@ -446,4 +453,9 @@ body {
       opacity: .6;
     }
   }
+}
+
+
+footer {
+
 }

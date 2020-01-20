@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 
 const BlogPage = () => (
     <Layout>
-        <SEO title="Blog"/>
+        <SEO title="Blog | Rychillie {'\ud83e\udd84'}"/>
         <div className={"container"}>
             <h1>Blog</h1>
         </div>

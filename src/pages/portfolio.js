@@ -1,21 +1,29 @@
 import React from "react"
 
-import { graphql } from "gatsby"
+import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-export default ({ data }) => {
-  const post = data.markdownRemark
-
+const PortfolioPage = ({data}) => {
   return (
     <Layout>
-        <SEO title="Portfolio | Rychillie {'\ud83e\udd84'}"/>
-      <div className={"blogpost"}>
-        <h3 className={"titulo"}>{post.frontmatter.title}</h3>
-        <img alt={post.frontmatter.title} className={"imagepost"} src={post.frontmatter.image}></img>
-        <p className={"categorydate"}>{post.frontmatter.categories} — {post.frontmatter.date}</p>
-        <div className={"article"} dangerouslySetInnerHTML={{ __html: post.html }} />
-      </div>
+      <SEO title="Portfolio | Rychillie {'\ud83e\udd84'}"/>
+      {data.allMarkdownRemark.edges.map(({ node }) => (
+        <div key={node.id} className={"post"}>
+            <Link to={node.fields.slug}>
+              <div className={"content"}>
+                <div className={"imgpost"}>
+                  <img alt={node.frontmatter.title} className={"imagepost"} src={node.frontmatter.image}></img>
+                </div>
+                <div className={"descrition"}>
+                  <span className={"categorypost"}>{node.frontmatter.categories}</span>
+                  <h3 className={"titlepost"}>{node.frontmatter.title}</h3>
+                  <span className={"datepost"}>{node.frontmatter.date}</span>
+                </div>
+              </div>
+            </Link>
+        </div>
+      ))}
     </Layout>
   )
 }
@@ -40,3 +48,5 @@ export const query = graphql`{
     }
   }
 `
+
+export default PortfolioPage
