@@ -24,6 +24,14 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: `${__dirname}/static/images`,
+        }
+      }
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `blog`,
@@ -67,8 +75,8 @@ module.exports = {
         description: 'Brazilian Front-End Developer',
         short_name: `Rychillie 🦄`,
         start_url: `/`,
-        background_color: `#1A1A1A`,
-        theme_color: `#FF5757`,
+        background_color: `#FF5757`,
+        theme_color: `#1A1A1A`,
         display: `standalone`,
         icon: `${__dirname}/static/images/histaff.png`, // This path is relative to the root of the site.
       },
