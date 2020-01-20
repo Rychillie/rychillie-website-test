@@ -330,6 +330,13 @@ body {
     width: 100%;
   }
 
+  img.imagepost {
+    max-width: 100%;
+    position: relative;
+    display: inline-block;
+    @include border-radius(5px);
+  }
+
   .article {
     display: inline-block;
     width: 100%;
@@ -348,6 +355,7 @@ body {
 }
 
 .formcontato {
+  display: inline-block;
   position: relative;
   width: 100%;
 
@@ -420,6 +428,8 @@ body {
   }
 
   button.enviar {
+    position: relative;
+    display: inline-block;
     background: transparent;
     margin: 25px 0;
     padding: 5px 0;
