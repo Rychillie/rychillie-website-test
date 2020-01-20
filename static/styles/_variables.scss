@@ -13,6 +13,12 @@ $gray:          #8d8d8d;
 $white:         #FFFFFF;
 $dark:          #1A1A1A;
 
+@mixin box-sizing($box-model) {
+    -webkit-box-sizing: $box-model;
+    -moz-box-sizing: $box-model;
+    box-sizing: $box-model;
+}
+
 @mixin box-shadow($shadow...) {
     -webkit-box-shadow: $shadow;
     -moz-box-shadow: $shadow;

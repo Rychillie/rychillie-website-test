@@ -9,6 +9,15 @@ body {
 
   p {
     font-family: $montserrat;
+    margin: 0 0 24px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  hr {
+    border: .5px solid $gray;
+    margin: 24px auto;
+    width: 60%;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -143,6 +152,9 @@ body {
       }
 
       p {
+        font-size: 18px;
+        line-height: 22px;
+
         a {
           color: $main;
           opacity: 1;
@@ -236,6 +248,10 @@ body {
     width: 100%;
     vertical-align: top;
     position: relative;
+    padding: 25px 20px;
+    background: darken($dark, 1%);
+    @include box-sizing(border-box);
+    @include border-radius;
 
     .imgpost {
       position: relative;
@@ -295,19 +311,23 @@ body {
 }
 
 .blogpost {
+  width: 100%;
+
   .titulo {
     text-align: left;
     color: $white;
-    margin: .5rem 0;
+    margin: 10px 0;
     font-weight: 600;
-    font-size: 1.6rem;
+    font-size: 26px;
+    width: 100%;
   }
 
   .categorydate {
     display: inline-block;
-    margin: .4rem 0 1.2rem;
+    margin: 10px 0 20px;
     font-weight: 300;
-    font-size: .9rem;
+    font-size: 14px;
+    width: 100%;
   }
 
   .article {
@@ -316,13 +336,104 @@ body {
     position: relative;
 
     p {
-      margin: 0 0 1.2rem;
-      font-size: 1.2rem;
-      line-height: 1.6rem;
+      margin: 0 0 24px;
+      font-size: 18px;
+      line-height: 24px;
     }
 
     img {
       max-width: 100%;
+    }
+  }
+}
+
+.formcontato {
+  position: relative;
+  width: 100%;
+
+  .details {
+    position: relative;
+    width: 100%;
+
+    input {
+      width: 100%;
+      color: $white;
+      border-top: 0;
+      border-left: 0;
+      border-right: 0;
+      margin: 20px 0;
+      font-size: 20px;
+      line-height: 20px;
+      min-height: 60px;
+      padding: 20px 15px;
+      border-bottom: 2px solid $main;
+      background: darken($dark, 1%);
+      @include box-sizing(border-box);
+
+      &:focus {
+        border: 0!important;
+        box-shadow: unset!important;
+        outline: none!important;
+        color: $white;
+      }
+
+      @media only screen and (min-width: 45em) {
+        &.name {
+          float: left;
+          width: 46%;
+          margin-right: 4%;
+        }
+
+        &.email {
+          float: left;
+          width: 46%;
+          margin-left: 4%;
+        }
+      }
+    }
+  }
+
+  .textarea {
+    border-bottom: 2px solid $main;
+    margin: 20px 0;
+
+    textarea.text {
+      color: $white;
+      border: 0;
+      width: 100%;
+      font-size: 20px;
+      line-height: 20px;
+      min-width: 100%;
+      max-width: 100%;
+      min-height: 240px;
+      padding: 20px 15px;
+      background: darken($dark, 1%);
+      @include box-sizing(border-box);
+
+      &:focus {
+        border: 0!important;
+        box-shadow: unset!important;
+        outline: none!important;
+        color: $white;
+      }
+    }
+  }
+
+  button.enviar {
+    background: transparent;
+    margin: 25px 0;
+    padding: 5px 0;
+    line-height: 32px;
+    font-size: 24px;
+    float: right;
+    color: $main;
+    opacity: 1;
+    border: 0;
+    @include box-sizing(border-box);
+
+    &:hover {
+      cursor: pointer;
+      opacity: .6;
     }
   }
 }

@@ -9,11 +9,11 @@ export default ({ data }) => {
   return (
     <Layout>
       <Helmet>
-        <title>{post.frontmatter.title} | Rychillie 🦄</title>
+        <title>{post.frontmatter.title} | Rychillie {'\ud83e\udd84'}</title>
       </Helmet>
       <div className={"blogpost"}>
         <h3 className={"titulo"}>{post.frontmatter.title}</h3>
-        <span className={"categorydate"}>{post.frontmatter.categories} — {post.frontmatter.date}</span>
+        <p className={"categorydate"}>{post.frontmatter.categories} — {post.frontmatter.date}</p>
         <div className={"article"} dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
     </Layout>
