@@ -33,7 +33,7 @@ const Bio = () => (
                 </ul>
             </div>
             <div className={"col-6"}>
-                <p className={"center"}>Rychillie</p>
+                <p className={"copy"}>Rychillie 🦄</p>
             </div>
         </div>
     </footer>
