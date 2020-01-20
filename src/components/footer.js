@@ -1,10 +1,10 @@
 import {Link} from "gatsby"
 import React from "react"
 
-import IconTwitter from "../static/images/icons/twitter.svg"
-import IconInstagram from "../static/images/icons/instagram.svg"
-import IconGithub from "../static/images/icons/github.svg"
-import IconYoutube from "../static/images/icons/youtube.svg"
+import IconTwitter from "../static/images/twitter.svg"
+import IconInstagram from "../static/images/instagram.svg"
+import IconGithub from "../static/images/github.svg"
+import IconYoutube from "../static/images/youtube.svg"
 
 const Bio = () => (
     <footer>
