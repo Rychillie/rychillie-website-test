@@ -33,7 +33,7 @@ const Bio = () => (
                 </ul>
             </div>
             <div className={"col-6"}>
-                <p className={"copy"}>Rychillie 🦄</p>
+                <p className={"copy"}>Rychillie <a href="https://rychillie.net/rss.xml"><img className="rssicon" src="https://upload.wikimedia.org/wikipedia/commons/4/43/Feed-icon.svg" alt="RSS Icon"></img></a></p>
             </div>
         </div>
     </footer>
