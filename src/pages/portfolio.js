@@ -1,8 +1,8 @@
 import React from "react"
-
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Img from "gatsby-image"
 
 const PortfolioPage = ({data}) => {
   return (
@@ -13,7 +13,7 @@ const PortfolioPage = ({data}) => {
             <Link to={node.fields.slug}>
               <div className={"content"}>
                 <div className={"imgpost"}>
-                  <img loading="lazy" alt={node.frontmatter.title} className={"imagepost"} src={node.frontmatter.image}></img>
+                  <Img fluid={node.frontmatter.image.childImageSharp.fluid} alt={node.frontmatter.title}/>
                 </div>
                 <div className={"descrition"}>
                   <span className={"categorypost"}>{node.frontmatter.categories}</span>
@@ -37,7 +37,13 @@ export const query = graphql`{
             id: title
             title
             categories
-            image
+            image {
+              childImageSharp
+                fluid(maxWidth: 640) {
+                ...GatsbyImageSharpFluid
+                }
+              }
+            }
             date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
           }
           fields {

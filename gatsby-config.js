@@ -12,6 +12,107 @@ module.exports = {
         lang: 'pt-br'
       }
     },
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-twitter`,
+    `gatsby-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        plugins: [
+          {
+            resolve: 'gatsby-remark-relative-images',
+          },
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 640,
+            },
+          },
+          {
+            resolve: 'gatsby-remark-copy-linked-files',
+            options: {
+              destinationDir: 'static',
+            },
+          },
+          {
+            resolve: `gatsby-plugin-netlify-cms-paths`,
+            options: {
+              // Path to your Netlify CMS config file
+              cmsConfig: `/static/admin/config.yml`
+            }
+          },
+        ],
+      },
+    },
+    {
+      // keep as first gatsby-source-filesystem plugin for gatsby image support
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/static/images`,
+        name: 'uploads',
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/static/images`,
+        name: `images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/blog/`,
+        name: `blog`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/portfolio/`,
+        name: `portfolio`,
+      },
+    },
+    `gatsby-remark-lazy-load`,
+    `gatsby-remark-external-links`,
+    `gatsby-plugin-transition-link`,
+    `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [".mdx", ".md"],
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-copy-linked-files`,
+          },
+          {
+            resolve: `gatsby-remark-smartypants`,
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 640,
+            },
+          },
+        ],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Rychillie 🦄`,
+        description: 'Brazilian Front-End Developer',
+        short_name: `Rychillie 🦄`,
+        start_url: `/`,
+        background_color: `#FF5757`,
+        theme_color: `#1A1A1A`,
+        display: `standalone`,
+        icon: `${__dirname}/static/images/histaff.png`, // This path is relative to the root of the site.
+      },
+    },
+    'gatsby-plugin-sitemap',
     {
       resolve: `gatsby-plugin-feed`,
       options: {
@@ -65,68 +166,7 @@ module.exports = {
         ],
       },
     },
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-twitter`,
     `gatsby-plugin-netlify-cms`,
-    `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/static/images`,
-      },
-    },
-    `gatsby-image`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `blog`,
-        path: `${__dirname}/content/blog/`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `portfolio`,
-        path: `${__dirname}/content/portfolio/`,
-      },
-    },
-    `gatsby-transformer-remark`,
-    `gatsby-remark-lazy-load`,
-    `gatsby-remark-external-links`,
-    `gatsby-plugin-transition-link`,
-    `gatsby-plugin-offline`,
-    {
-      resolve: `gatsby-plugin-mdx`,
-      options: {
-        extensions: [".mdx", ".md"],
-        gatsbyRemarkPlugins: [
-          {
-            resolve:
-            `gatsby-remark-copy-linked-files`,
-          },
-          {
-            resolve: `gatsby-remark-smartypants`,
-          },
-        ],
-      },
-    },
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `Rychillie 🦄`,
-        description: 'Brazilian Front-End Developer',
-        short_name: `Rychillie 🦄`,
-        start_url: `/`,
-        background_color: `#FF5757`,
-        theme_color: `#1A1A1A`,
-        display: `standalone`,
-        icon: `${__dirname}/static/images/histaff.png`, // This path is relative to the root of the site.
-      },
-    },
-    'gatsby-plugin-sitemap',
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
