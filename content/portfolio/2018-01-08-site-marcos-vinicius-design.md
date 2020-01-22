@@ -2,7 +2,7 @@
 layout: portfolio
 date: '2018-01-08 22:00'
 image: /images/marcos-design.webp
-title: Site - Marcos Vinícius Design
+title: WebSite Marcos Vinícius Design
 description: Site do parceiro comercial Marcos Vinicius Design
 introduction: Site do parceiro comercial Marcos Vinicius Design
 empresa: Marcos Vinícius Design
