@@ -4,6 +4,7 @@ import IconTwitter from "../../static/images/twitter.svg"
 import IconInstagram from "../../static/images/instagram.svg"
 import IconGithub from "../../static/images/github.svg"
 import IconYoutube from "../../static/images/youtube.svg"
+import RSS from "../../static/images/rss.svg"
 
 const Bio = () => (
     <footer>
@@ -33,7 +34,7 @@ const Bio = () => (
                 </ul>
             </div>
             <div className={"col-6"}>
-                <p className={"copy"}>Rychillie <a href="https://rychillie.net/rss.xml"><img className="rssicon" src="https://upload.wikimedia.org/wikipedia/commons/4/43/Feed-icon.svg" alt="RSS Icon"></img></a></p>
+                <p className={"copy"}>Rychillie <a href="https://rychillie.net/rss.xml"><img src={RSS} alt={"icone RSS"} className={"rssicon"}/></a></p>
             </div>
         </div>
     </footer>

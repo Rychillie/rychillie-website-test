@@ -7,10 +7,10 @@ const Bio = () => (
     <div className={"bio"}>
         <div className={"container"}>
             <div className={"apresentation row"}>
-                <div className={"col-3 profile"}>
+                <div className={"col-4 profile"}>
                     <img loading="lazy" alt="Rychillie" src={ProfileImg}/>
                 </div>
-                <div className={"col-9 hometext"}>
+                <div className={"col-8 hometext"}>
                     <h2>
                         Olá, Eu sou <span>Rychillie</span>
                     </h2>

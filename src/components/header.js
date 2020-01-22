@@ -6,20 +6,17 @@ const Header = ({siteTitle}) => (
     <header>
         <div className={"container"}>
             <div className={"row top-menu"}>
-                <div className={"col-5-sm col-7 title"}>
+                <div className={"col-6-sm title"}>
                     <Link to="/" title={siteTitle} className={"title"}>Rychillie</Link>
                 </div>
 
-                <nav className={"col-7-sm col-5 nav-top"}>
+                <nav className={"col-5-sm nav-top"}>
                     <ul>
-                        <li>
-                            <Link to="/blog" title={"Blog"}>Blog</Link>
-                        </li>
                         <li>
                             <Link to="/portfolio" title={"Portfolio"}>Portfolio</Link>
                         </li>
                         <li>
-                            <Link to="/about" title={"About"}>Sobre</Link>
+                            <Link to="/about" title={"Sobre"}>Sobre</Link>
                         </li>
                     </ul>
                 </nav>

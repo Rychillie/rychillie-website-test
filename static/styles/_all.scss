@@ -41,68 +41,64 @@ body {
     }
   }
 
-  header {
-    background-color: $dark;
+  img {
+    padding-bottom: 30px;
+    position: relative;
+    margin: 0 auto;
     display: block;
-    padding: 17px 0;
+    max-width: 100%;
+  }
+}
 
-    @media only screen and (min-width: 60em) {
-      padding: 32px 0;
-    }
+header {
+  background-color: $dark;
+  display: block;
+  padding: 17px 0;
 
-    .title {
-      margin-left: 0!important;
-      margin-right: 4%!important;
+  @media only screen and (min-width: 60em) {
+    padding: 32px 0;
+  }
 
-      a {
-        width: 151px;
-        font-size: 32px;
-        line-height: 40px;
-        text-align: left;
-        height: 40px;
-        color: $main;
-        opacity: 1;
+  .title {
+    a {
+      width: 151px;
+      font-size: 32px;
+      line-height: 40px;
+      text-align: left;
+      height: 40px;
+      color: $main;
+      opacity: 1;
 
-        &:hover {
-          opacity: .6;
-        }
+      &:hover {
+        opacity: .6;
       }
     }
+  }
 
-    .top-menu {
-      position: unset;
+  .top-menu {
+    position: unset;
 
-      .nav-top {
-        display: block;
-        margin-right: 0!important;
-        width: 56.33%!important;
+    .nav-top {
+      ul {
+        display: flex;
+        justify-content: space-around;
+        position: relative;
+        opacity: 1;
+        top: unset;
+        left: unset;
+        list-style: none;
+        z-index: 2;
+        @include transform(unset);
 
-        @media only screen and (min-width: 45em) {
-          width: 39.66%!important;
-          margin-left: 2%!important;
-        }
+        li {
+          display: inline-block;
 
-        ul {
-          display: flex;
-          justify-content: space-around;
-          position: relative;
-          opacity: 1;
-          top: unset;
-          left: unset;
-          list-style: none;
-          z-index: 2;
-          @include transform(unset);
-
-          li {
+          a {
             display: inline-block;
-
-            a {
-              display: inline-block;
-              font-size: 18px;
-              line-height: 40px;
-              text-align: center;
-              margin: 0;
-            }
+            font-size: 18px;
+            line-height: 40px;
+            text-align: center;
+            margin: 0;
           }
         }
       }
@@ -126,6 +122,7 @@ body {
         margin: 0 auto;
         object-fit: cover;
         width: 100%;
+        padding: 0;
         position: relative;
         display: block;
         @include border-radius(250px);
@@ -175,8 +172,6 @@ body {
   }
 
   @media only screen and (min-width: 45em) {
-    padding: 100px 0 120px;
-
     .apresentation {
       .profile {
         img {
@@ -211,8 +206,6 @@ body {
   }
 
   @media only screen and (min-width: 60em) {
-    padding: 160px 0 180px;
-
     .apresentation {
       .profile {
         img {
@@ -276,6 +269,8 @@ body {
       .imagepost {
         position: absolute;
         max-height: 100%;
+        padding-bottom: 0;
+        max-width: unset;
         top: 50%;
         left: 50%;
         @include transform(translate(-50%, -50%));
@@ -341,6 +336,7 @@ body {
     max-width: 100%;
     position: relative;
     display: inline-block;
+    padding-bottom: 0;
     @include border-radius(5px);
   }
 
@@ -361,123 +357,146 @@ body {
   }
 }
 
-.formcontato {
-  display: inline-block;
-  position: relative;
-  width: 100%;
+.about {
+  h1.eu {
+    text-align: center;
+    color: $white;
 
-  .details {
+    span {
+      color: $main;
+    }
+  }
+
+  img.profile {
+    position: relative;
+    padding-bottom: 30px;
+    margin: 0 auto;
+    display: block;
+    max-width: 100%;
+  }
+
+  .formcontato {
+    display: inline-block;
     position: relative;
     width: 100%;
 
-    input {
+    .details {
+      position: relative;
       width: 100%;
-      color: $white;
-      border-top: 0;
-      border-left: 0;
-      border-right: 0;
-      margin: 20px 0;
-      font-size: 20px;
-      line-height: 20px;
-      min-height: 60px;
-      padding: 20px 15px;
+
+      input {
+        width: 100%;
+        color: $white;
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+        margin: 20px 0;
+        font-size: 20px;
+        line-height: 20px;
+        min-height: 60px;
+        padding: 20px 15px;
+        border-bottom: 2px solid $main;
+        background: darken($dark, 1%);
+        @include box-sizing(border-box);
+
+        &:focus {
+          border: 0!important;
+          box-shadow: unset!important;
+          outline: none!important;
+          color: $white;
+        }
+
+        @media only screen and (min-width: 45em) {
+          &.name {
+            float: left;
+            width: 46%;
+            margin-right: 4%;
+          }
+
+          &.email {
+            float: left;
+            width: 46%;
+            margin-left: 4%;
+          }
+        }
+      }
+    }
+
+    .textarea {
       border-bottom: 2px solid $main;
-      background: darken($dark, 1%);
-      @include box-sizing(border-box);
+      margin: 20px 0;
 
-      &:focus {
-        border: 0!important;
-        box-shadow: unset!important;
-        outline: none!important;
+      textarea.text {
         color: $white;
-      }
+        border: 0;
+        width: 100%;
+        font-size: 20px;
+        line-height: 20px;
+        min-width: 100%;
+        max-width: 100%;
+        min-height: 240px;
+        padding: 20px 15px;
+        background: darken($dark, 1%);
+        @include box-sizing(border-box);
 
-      @media only screen and (min-width: 45em) {
-        &.name {
-          float: left;
-          width: 46%;
-          margin-right: 4%;
-        }
-
-        &.email {
-          float: left;
-          width: 46%;
-          margin-left: 4%;
+        &:focus {
+          border: 0!important;
+          box-shadow: unset!important;
+          outline: none!important;
+          color: $white;
         }
       }
     }
-  }
 
-  .textarea {
-    border-bottom: 2px solid $main;
-    margin: 20px 0;
-
-    textarea.text {
-      color: $white;
+    button.enviar {
+      position: relative;
+      display: inline-block;
+      background: transparent;
+      margin: 25px 0;
+      padding: 5px 0;
+      line-height: 32px;
+      font-size: 24px;
+      float: right;
+      color: $main;
+      opacity: 1;
       border: 0;
-      width: 100%;
-      font-size: 20px;
-      line-height: 20px;
-      min-width: 100%;
-      max-width: 100%;
-      min-height: 240px;
-      padding: 20px 15px;
-      background: darken($dark, 1%);
       @include box-sizing(border-box);
 
-      &:focus {
-        border: 0!important;
-        box-shadow: unset!important;
-        outline: none!important;
-        color: $white;
+      &:hover {
+        cursor: pointer;
+        opacity: .6;
       }
-    }
-  }
-
-  button.enviar {
-    position: relative;
-    display: inline-block;
-    background: transparent;
-    margin: 25px 0;
-    padding: 5px 0;
-    line-height: 32px;
-    font-size: 24px;
-    float: right;
-    color: $main;
-    opacity: 1;
-    border: 0;
-    @include box-sizing(border-box);
-
-    &:hover {
-      cursor: pointer;
-      opacity: .6;
     }
   }
 }
 
-
 footer {
   padding: 20px 0;
 
+  img {
+    padding: 0;
+  }
+
   .socialfooter {
     justify-content: space-around;
+    margin-bottom: 30px;
     display: flex;
 
     .socialfooteritem {
       display: inline-block;
-      max-width: 32px;
-      max-height: 32px;
+      max-width: 28px;
+      max-height: 28px;
 
       a {
         display: inline-block;
-        max-width: 32px;
-        max-height: 32px;
+        max-width: 28px;
+        max-height: 28px;
         opacity: 1;
 
         img {
           display: inline-block;
-          max-width: 32px;
-          max-height: 32px;
+          max-width: 28px;
+          max-height: 28px;
           width: 100%;
           height: 100%;
         }
@@ -495,15 +514,37 @@ footer {
         }
       }
     }
+
+    @media only screen and (min-width: 45em) {
+      padding: 0;
+    }
   }
 
   p.copy {
+    line-height: 28px;
     text-align: center;
     margin: 0;
 
-    .rssicon {
+    a {
       max-width: 18px;
       max-height: 18px;
+      position: relative;
+      display: inline-block;
+
+      .rssicon {
+        width: 100%;
+        max-width: 18px;
+        max-height: 18px;
+        position: relative;
+        display: inline-block;
+        opacity: .6;
+      }
+
+      &:hover {
+        .rssicon {
+          opacity: 1;
+        }
+      }
     }
 
     @media only screen and (min-width: 45em) {
