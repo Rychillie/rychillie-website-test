@@ -2,14 +2,15 @@ import React from "react"
 import {Link, useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
+//import ProfileImg from "../../static/images/rychillie.webp"
 
 export default () => {
     const data = useStaticQuery(graphql`
     query {
         file(relativePath: { eq: "rychillie.webp" }) {
             childImageSharp {
-                fixed(width: 250, height: 250) {
-                    ...GatsbyImageSharpFixed
+                fluid {
+                    ...GatsbyImageSharpFluid
                 }
             }
         }
@@ -20,10 +21,12 @@ export default () => {
             <div className={"container"}>
                 <div className={"apresentation row"}>
                     <div className={"col-4 profile"}>
-                        <Img
-                            fixed={data.file.childImageSharp.fixed}
-                            alt="Rychillie"
-                        />
+                        <div className={"avatar"}>
+                            <Img
+                                fluid={data.file.childImageSharp.fluid}
+                                alt="Rychillie"
+                            />
+                        </div>
                     </div>
                     <div className={"col-8 hometext"}>
                         <h2>
