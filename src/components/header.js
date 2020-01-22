@@ -6,11 +6,11 @@ const Header = ({siteTitle}) => (
     <header>
         <div className={"container"}>
             <div className={"row top-menu"}>
-                <div className={"col-6-sm title"}>
+                <div className={"col-6-sm col-8-lm col-9 title"}>
                     <Link to="/" title={siteTitle} className={"title"}>Rychillie</Link>
                 </div>
 
-                <nav className={"col-5-sm nav-top"}>
+                <nav className={"col-6-sm col-4-lm col-3 nav-top"}>
                     <ul>
                         <li>
                             <Link to="/portfolio" title={"Portfolio"}>Portfolio</Link>

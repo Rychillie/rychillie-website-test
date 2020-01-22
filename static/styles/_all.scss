@@ -81,14 +81,11 @@ header {
     .nav-top {
       ul {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         position: relative;
-        opacity: 1;
-        top: unset;
-        left: unset;
         list-style: none;
+        opacity: 1;
         z-index: 2;
-        @include transform(unset);
 
         li {
           display: inline-block;
@@ -98,6 +95,7 @@ header {
             font-size: 18px;
             line-height: 40px;
             text-align: center;
+
             margin: 0;
           }
         }
