@@ -350,6 +350,22 @@ header {
       margin: 0 auto;
     }
 
+    a {
+      position: relative;
+
+      &::before {
+        content: "";
+        border-bottom: 8px solid $main;
+        display: inline-block;
+        position: absolute;
+        z-index: -1;
+        height: 10px;
+        width: 100%;
+        bottom: 4px;
+        opacity: .3;
+      }
+    }
+
     p {
       margin: 0 0 24px;
       font-size: 18px;
