@@ -345,6 +345,11 @@ header {
     width: 100%;
     position: relative;
 
+    iframe {
+      display: block;
+      margin: 0 auto;
+    }
+
     p {
       margin: 0 0 24px;
       font-size: 18px;
