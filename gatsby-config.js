@@ -76,6 +76,9 @@ module.exports = {
         path: `${__dirname}/static/images`,
       },
     },
+    `gatsby-image`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -91,11 +94,9 @@ module.exports = {
       },
     },
     `gatsby-transformer-remark`,
-    `gatsby-transformer-sharp`,
     `gatsby-remark-lazy-load`,
     `gatsby-remark-external-links`,
     `gatsby-plugin-transition-link`,
-    `gatsby-plugin-sharp`,
     `gatsby-plugin-offline`,
     {
       resolve: `gatsby-plugin-mdx`,

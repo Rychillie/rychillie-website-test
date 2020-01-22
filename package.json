@@ -10,7 +10,7 @@
     "ftp-deploy": "^2.3.3",
     "gatsby": "^2.18.17",
     "gatsby-cli": "^2.6.5",
-    "gatsby-image": "^2.1.2",
+    "gatsby-image": "^2.2.39",
     "gatsby-plugin-feed": "^2.3.26",
     "gatsby-plugin-feed-mdx": "^1.0.0",
     "gatsby-plugin-google-analytics": "^2.1.31",
