@@ -1,7 +1,7 @@
 ---
 layout: post
 date: '2019-06-17 20:00:00'
-image: /images/androidvsios.jpg
+image: /images/vscode-minhas-extesoes-mais-dicas.png
 title: VSCode Minhas Extensões + Dicas
 description: Algumas dicas de Plugins/Extensões para VSCode
 introduction: Algumas dicas de Plugins/Extensões para VSCode
