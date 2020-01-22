@@ -1,7 +1,7 @@
 ---
 date: '2017-01-07 22:00'
 image: /images/jomax-servicos.webp
-title: Site - Jomax Serviços
+title: Jomax Serviços
 description: Lading Page da Jomax Serviços
 introduction: Lading Page da Jomax Serviços
 empresa: Jomax Serviços
