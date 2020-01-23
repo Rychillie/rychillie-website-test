@@ -14,10 +14,12 @@ const IndexPage = ({data}) => {
             <Link to={node.fields.slug}>
               <div className={"content"}>
                 <div className={"imgpost"}>
-                  <Img
-                    fluid={node.frontmatter.image.childImageSharp.fluid}
-                    alt={node.frontmatter.title}
-                  />
+                  <div className={"imagepost"}>
+                    <Img
+                      fluid={node.frontmatter.image.childImageSharp.fluid}
+                      alt={node.frontmatter.title}
+                    />
+                  </div>
                 </div>
                 <div className={"descrition"}>
                   <span className={"categorypost"}>{node.frontmatter.categories}</span>

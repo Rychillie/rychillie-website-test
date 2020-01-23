@@ -256,33 +256,29 @@ header {
     @include border-radius(5px);
 
     .imgpost {
-      position: relative;
-      display: inline-block;
-      width: 28%;
+      width: 100%;
       vertical-align: top;
+      position: relative;
       overflow: hidden;
 
-      &::after {
-        content: "";
-        display: block;
-        padding-top: 100%;
+      .imagepost {
+        width: 100%;
+        height: 100%;
+        padding-bottom: 0;
+        display: inline-block;
       }
 
-      .imagepost {
-        position: absolute;
-        max-height: 100%;
-        padding-bottom: 0;
-        max-width: unset;
-        top: 50%;
-        left: 50%;
-        @include transform(translate(-50%, -50%));
+      img {
+        padding-bottom: 0!important;
       }
     }
 
     .descrition {
-      display: inline-block;
-      margin: 0px 0px 0px 5%;
-      width: 67%;
+      position: relative;
+      display: block;
+      padding: 15px 10px;
+      width: 100%;
+      @include box-sizing(border-box);
 
       .titlepost {
         font-weight: 300;
