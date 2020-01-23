@@ -7,7 +7,7 @@ import Img from "gatsby-image"
 const PortfolioPage = ({data}) => {
   return (
     <Layout>
-      <SEO title="Portfolio | Rychillie {'\ud83e\udd84'}"/>
+      <SEO title="Portfolio | Rychillie"/>
         {data.allMarkdownRemark.edges.map(({ node }) => (
         <div key={node.id} className={"post"}>
             <Link to={node.fields.slug}>

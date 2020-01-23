@@ -7,7 +7,7 @@ import ProfileImg from "../../static/images/rychillie.webp"
 
 const AboutPage = () => (
     <Layout>
-        <SEO title="About"/>
+        <SEO title="Sobre | Rychillie"/>
         <div className="about">
             <h1 className={"eu"}>Olá, Eu sou <span>Rychillie Umpierre de Oliveira</span></h1>
 

@@ -102,9 +102,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Rychillie 🦄`,
+        name: `Rychillie`,
         description: 'Brazilian Front-End Developer',
-        short_name: `Rychillie 🦄`,
+        short_name: `Rychillie`,
         start_url: `/`,
         background_color: `#FF5757`,
         theme_color: `#1A1A1A`,

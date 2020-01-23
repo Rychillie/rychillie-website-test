@@ -10,7 +10,7 @@ export default ({ data }) => {
   return (
     <Layout>
       <Helmet>
-        <title>{post.frontmatter.title} | Rychillie {'\ud83e\udd84'}</title>
+        <title>{post.frontmatter.title} | Rychillie</title>
       </Helmet>
       <div className={"blogpost"}>
         <h3 className={"titulo"}>{post.frontmatter.title}</h3>
