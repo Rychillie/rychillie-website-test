@@ -1,6 +1,6 @@
 ---
 date: '2017-01-07 22:00'
-image: /images/jomax-servicos.webp
+image: /images/marcos-vinicius.webp
 title: WebSite Jomax Serviços
 description: Lading Page da Jomax Serviços
 introduction: Lading Page da Jomax Serviços
