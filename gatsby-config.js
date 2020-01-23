@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Rychillie 🦄',
+    title: 'Rychillie',
     description: `Brazilian Front-End Developer`,
     author: `@rychillie`,
     siteUrl: `https://rychillie.net`
@@ -109,7 +109,7 @@ module.exports = {
         background_color: `#FF5757`,
         theme_color: `#1A1A1A`,
         display: `standalone`,
-        icon: `${__dirname}/static/images/histaff.png`, // This path is relative to the root of the site.
+        icon: `${__dirname}/static/images/unicorn.png`, // This path is relative to the root of the site.
       },
     },
     'gatsby-plugin-sitemap',
