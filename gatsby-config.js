@@ -168,6 +168,13 @@ module.exports = {
     },
     `gatsby-plugin-netlify-cms`,
     {
+      resolve: `gatsby-plugin-google-adsense`,
+      options: {
+        googleAdClientId: "pub-7837358846130941",
+        head: false // Optional
+      }
+    },
+    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         // replace "UA-XXXXXXXXX-X" with your own Tracking ID
