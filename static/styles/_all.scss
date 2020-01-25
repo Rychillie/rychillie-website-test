@@ -251,17 +251,16 @@ header {
     vertical-align: top;
     position: relative;
     padding: 0;
-    background: darken($dark, 1%);
+    overflow: hidden;
+    background: darken($dark, 5%);
     @include box-sizing(border-box);
     @include border-radius(5px);
-    @include box-shadow(0 1px 1px 1px rgba(0, 0, 0, 0.15), 0 2px 2px 2px rgba(0, 0, 0, 0.15), 0 4px 4px 4px rgba(0, 0, 0, 0.15), 0 8px 8px 8px rgba(0, 0, 0, 0.15));
     @include transition(box-shadow .3s ease-in-out);
 
     .imgpost {
       width: 100%;
       vertical-align: top;
       position: relative;
-      overflow: hidden;
 
       .imagepost {
         width: 100%;
@@ -314,7 +313,6 @@ header {
   a {
     &:hover {
       .content {
-        @include box-shadow(0 1px 1px 1px rgba(0,0,0,0.11), 0 2px 2px 2px rgba(0,0,0,0.11), 0 4px 4px 4px rgba(0,0,0,0.11), 0 8px 8px 8px rgba(0,0,0,0.11), 0 16px 16px 16px rgba(0,0,0,0.11), 0 32px 32px 32px rgba(0,0,0,0.11));
       }
     }
   }
