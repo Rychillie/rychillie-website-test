@@ -245,6 +245,7 @@ header {
 .post {
   max-width: 640px;
   margin: 0px auto 45px;
+  display: block;
 
   .content {
     width: 100%;
@@ -255,7 +256,6 @@ header {
     background: darken($dark, 5%);
     @include box-sizing(border-box);
     @include border-radius(5px);
-    @include transition(box-shadow .3s ease-in-out);
 
     .imgpost {
       width: 100%;

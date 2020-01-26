@@ -10,25 +10,23 @@ const IndexPage = ({data}) => {
     <Layout>
       <SEO title="Rychillie, a Brazilian Front-End Developer"/>
       {data.allMarkdownRemark.edges.map(({ node }) => (
-        <div key={node.id} className={"post"}>
-            <Link to={node.fields.slug}>
-              <div className={"content"}>
-                <div className={"imgpost"}>
-                  <div className={"imagepost"}>
-                    <Img
-                      fluid={node.frontmatter.image.childImageSharp.fluid}
-                      alt={node.frontmatter.title}
-                    />
-                  </div>
-                </div>
-                <div className={"descrition"}>
-                  <span className={"categorypost"}>{node.frontmatter.categories}</span>
-                  <h3 className={"titlepost"}>{node.frontmatter.title}</h3>
-                  <span className={"datepost"}>{node.frontmatter.date}</span>
-                </div>
+        <Link className={"post"} key={node.id} to={node.fields.slug}>
+          <div className={"content"}>
+            <div className={"imgpost"}>
+              <div className={"imagepost"}>
+                <Img
+                  fluid={node.frontmatter.image.childImageSharp.fluid}
+                  alt={node.frontmatter.title}
+                />
               </div>
-            </Link>
-        </div>
+            </div>
+            <div className={"descrition"}>
+              <span className={"categorypost"}>{node.frontmatter.categories}</span>
+              <h3 className={"titlepost"}>{node.frontmatter.title}</h3>
+              <span className={"datepost"}>{node.frontmatter.date}</span>
+            </div>
+          </div>
+        </Link>
       ))}
       <Footer />
     </Layout>
