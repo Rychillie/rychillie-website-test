@@ -170,9 +170,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-adsense`,
       options: {
-        googleAdClientId: "pub-7837358846130941",
-        head: false // Optional
-      }
+        publisherId: `ca-pub-7837358846130941`
+      },
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
