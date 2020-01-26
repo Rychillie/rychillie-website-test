@@ -18,7 +18,7 @@ tags:
 categories:
   - Dicas
 ---
-**[Assista ao Video deste Artigo](https://youtu.be/KkfLKJAgaX4)**
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KkfLKJAgaX4" frameborder="0" allowfullscreen></iframe>
 
 # VSCode O Meu Favorito
 
