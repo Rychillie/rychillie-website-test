@@ -9,7 +9,7 @@ const PortfolioPage = ({data}) => {
     <Layout>
       <SEO title="Portfolio | Rychillie"/>
         {data.allMarkdownRemark.edges.map(({ node }) => (
-        <div key={node.id} title={node.frontmatter.title} className={"post"}>
+        <div key={node.id} title={node.frontmatter.title} className={"post portfolio"}>
             <Link to={node.fields.slug}>
               <div className={"content"}>
                 <div className={"imgpost"}>

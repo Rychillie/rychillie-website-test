@@ -320,6 +320,11 @@ input[type="radio"][id="Portfolio"]:checked ~ .post[type="Dicas"] {
   margin-bottom: 45px;
   @include transition(all ease-in-out .5s);
 
+  &.portfolio {
+    max-width: 640px;
+    margin: 0px auto 45px;
+  }
+
   .content {
     width: 100%;
     vertical-align: top;
