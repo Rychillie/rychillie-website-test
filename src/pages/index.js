@@ -9,8 +9,18 @@ const IndexPage = ({data}) => {
   return (
     <Layout>
       <SEO title="Rychillie, a Brazilian Front-End Developer"/>
+
+      <input className={"filtropost"} type="radio" id="reset" name="color"/>
+      <label className={"filtropost"} htmlFor="reset">Todos</label>
+      <input className={"filtropost"} type="radio" id="Artigo" name="color" />
+      <label className={"filtropost"} htmlFor="Artigo">Artigos</label>
+      <input className={"filtropost"} type="radio" id="Dicas" name="color"/>
+      <label className={"filtropost"} htmlFor="Dicas">Dicas</label>
+      <input className={"filtropost"} type="radio" id="Portfolio" name="color"/>
+      <label className={"filtropost"} htmlFor="Portfolio">Portfolio</label>
+
       {data.allMarkdownRemark.edges.map(({ node }) => (
-        <Link className={"post"} key={node.id} to={node.fields.slug} title={node.frontmatter.title}>
+        <Link className={"post"} type={node.frontmatter.categories} key={node.id} to={node.fields.slug} title={node.frontmatter.title}>
           <div className={"content"}>
             <div className={"imgpost"}>
               <div className={"imagepost"}>

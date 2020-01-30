@@ -6,7 +6,7 @@ import "../../static/styles/main.scss"
 const Home = ({children}) => (
     <>
     <Bio/>
-    <main className={"container"}>{children}</main>
+    <main className={"homecontainer"}>{children}</main>
     </>
 )
 
